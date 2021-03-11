@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { FiAlertCircle } from 'react-icons/fi';
+import React, { useCallback, useState } from 'react';
+import { Link, useHistory } from 'react-router-dom';
+import { FiAlertCircle, FiEye } from 'react-icons/fi';
 import Button from '../../components/Button';
 import Checkbox from '../../components/Checkbox';
 import Input from '../../components/SingInInput';
@@ -17,6 +17,11 @@ import {
 const SingIn: React.FC = () => {
   const [email, setEmail] = useState('');
   const [checked, setChecked] = useState(false);
+  const history = useHistory();
+
+  const handleLogin = useCallback(() => {
+    history.push('/dashboard');
+  }, [history]);
 
   return (
     <Container>
@@ -29,24 +34,26 @@ const SingIn: React.FC = () => {
               name="email"
               inputStyle={{ borderRadius: '10px 10px 0px 0px' }}
               placeholder="E-mail"
+              type="email"
               onChange={e => setEmail(e.target.value)}
             />
+
             <Input
               name="senha"
               inputStyle={{ borderRadius: '0px 0px 10px 10px' }}
-              placeholder="Senha"
               type="password"
+              placeholder="Senha"
             />
 
             <ActionsContainer>
-              <Checkbox checked={checked} handleClick={() => setChecked(!checked)} />
+              <Checkbox checked={checked} label="Lembrar-me" handleClick={() => setChecked(!checked)} />
 
               <Link to="/">
                 <span>Esqueci minha senha</span>
               </Link>
             </ActionsContainer>
 
-            <Button>Acessar plataforma</Button>
+            <Button onClick={handleLogin}>Acessar plataforma</Button>
           </SingInContainer>
 
           <AlertContainer>

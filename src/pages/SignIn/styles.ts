@@ -51,7 +51,7 @@ export const ActionsContainer = styled.div`
     a{
         text-decoration: none;
         font-family: 'Heebo';
-        font-size: 16px;
+        font-size: 15px;
         color: #A0ACB3;
 
     }

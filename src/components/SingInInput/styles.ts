@@ -47,3 +47,10 @@ export const Container = styled.div`
         -moz-transition: all .3s ease-out;
     }
 `;
+
+export const IconContainer = styled.div`
+    width: 24px;
+    height: 24px;
+    margin-top: 14px;
+    margin-left: 10px;
+`;
