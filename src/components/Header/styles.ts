@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.header`
-    max-width: 86px;
-    width: 100%;
+    max-width: 65px;
+    flex: 1;
     background: #F25D27;
     padding: 25px 10px;
     display: flex;
