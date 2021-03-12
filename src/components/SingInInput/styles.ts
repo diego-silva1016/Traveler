@@ -37,7 +37,7 @@ export const Container = styled.div`
 
     }
 
-    label {
+    > label {
         pointer-events: none;
         position: absolute;
         color: #A0ACB3;

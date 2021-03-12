@@ -1,19 +1,31 @@
-import React, { MouseEventHandler } from 'react';
+import React, { MouseEventHandler, InputHTMLAttributes } from 'react';
 import { FiCheck } from 'react-icons/fi';
 import { CheckboxContainer, Container } from './styles';
 
-interface CheckboxProps {
+interface CheckboxProps extends InputHTMLAttributes<HTMLInputElement> {
     handleClick: MouseEventHandler<HTMLDivElement>;
     checked: boolean;
     label?: string;
+    name: string;
 }
 
 const Checkbox: React.FC<CheckboxProps> = ({
-  checked, label, handleClick, ...rest
+  checked,
+  label,
+  name,
+  handleClick,
+  ...rest
 }) => (
   <CheckboxContainer {...rest}>
-    <Container checked={checked} onClick={handleClick}>
-      {checked && <FiCheck color="#fff" size={16} />}
+    <Container htmlFor={name} checked={checked}>
+      {checked && <FiCheck size={20} color="#fff" />}
+      <input
+        id={name}
+        name={name}
+        type="checked"
+        onClick={handleClick}
+        {...rest}
+      />
     </Container>
 
     { label && <p>{label}</p> }

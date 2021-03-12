@@ -10,6 +10,7 @@ export const ContainerButton = styled.button`
     border: 0;
     font-family: 'Heebo';
     font-size: 18px;
+    width: 100%;
 
     &:hover{
         background: ${shade(0.2, '#F25D27')};

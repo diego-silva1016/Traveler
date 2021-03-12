@@ -8,10 +8,12 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
     placeholder: string;
     name: string;
     type: string;
+    register: any;
+    config?: object;
 }
 
 const Input: React.FC<InputProps> = ({
-  inputStyle = {}, placeholder, name, type, ...rest
+  inputStyle = {}, placeholder, name, type, register, config = {}, ...rest
 }) => {
   const [visible, setVisible] = useState(false);
 
@@ -22,6 +24,7 @@ const Input: React.FC<InputProps> = ({
         placeholder=" "
         autoComplete="off"
         type={visible && type === 'password' ? 'text' : type}
+        ref={register(config)}
         {...rest}
       />
       <label htmlFor={name}>{placeholder}</label>
