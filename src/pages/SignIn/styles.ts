@@ -57,19 +57,3 @@ export const ActionsContainer = styled.div`
     }
 
 `;
-
-export const AlertContainer = styled.div`
-    margin-top: 50px;
-    max-width: 195px;
-    display: flex;
-    align-items: center;
-
-    p {
-        font-family: 'Heebo';
-        font-size: 14px;
-        color: #A0ACB3;
-        margin-left: 10px;
-    }
-
-
-`;

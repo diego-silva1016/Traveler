@@ -1,0 +1,26 @@
+.paginationContainer {
+    display: flex;
+    margin: 0;
+}
+
+.previus{
+    display: none;
+}
+
+.next{
+    display: none;
+}
+
+.active{
+    color: #000305 !important;
+    list-style: none;
+    border-bottom: 1px solid #000305;
+}
+
+.page {
+    list-style: none;
+    margin: 5px;
+    font-family: "Roboto";
+    color: #a5b2bb;
+    padding: 2px;
+}

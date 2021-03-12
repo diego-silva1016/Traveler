@@ -1,11 +1,6 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    height: 100vh;
-    display: flex;
-`;
-
-export const DashboardContainer = styled.div`
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -13,7 +8,7 @@ export const DashboardContainer = styled.div`
 
 export const DashboardHeader = styled.div`
     background: #fff;
-    height: 65px;
+    height: 85px;
     padding: 15px 100px;
     display: flex;
     align-items: center;
@@ -27,6 +22,16 @@ export const DashboardHeader = styled.div`
     }
 `;
 
-export const DashboardInfos = styled.div`
+export const ListContainer = styled.div`
+    padding: 30px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+`;
 
+export const CardsContainer = styled.div`
+    display: grid;
+    grid-gap: 22px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-content:center;
 `;

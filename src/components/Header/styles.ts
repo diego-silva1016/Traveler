@@ -4,7 +4,7 @@ export const Container = styled.header`
     max-width: 65px;
     flex: 1;
     background: #F25D27;
-    padding: 25px 10px;
+    padding: 20px 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

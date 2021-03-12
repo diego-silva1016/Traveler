@@ -7,7 +7,7 @@ import Logo from '../../assets/Logo.png';
 
 import { Container, ActionsContainer } from './styles';
 
-export const Header: React.FC = () => (
+const Header: React.FC = () => (
   <Container>
     <img src={Logo} alt="Logo" />
 

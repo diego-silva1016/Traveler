@@ -1,31 +1,40 @@
 import React from 'react';
 import { FiPlus } from 'react-icons/fi';
-import Header from '../../components/Header';
-import AddButon from '../../components/AddButton';
+import LinkButton from '../../components/LinkButton';
 
 import {
   Container,
-  DashboardContainer,
   DashboardHeader,
-  DashboardInfos,
+  CardsContainer,
+  ListContainer,
 } from './styles';
-import DashboardCities from './DashboardCities';
+import CitiesCard from './CitiesCard';
 
 const Dashboard: React.FC = () => (
   <Container>
-    <Header />
+    <DashboardHeader>
+      <h1>Cidades</h1>
 
-    <DashboardContainer>
-      <DashboardHeader>
-        <h1>Cidades</h1>
+      <LinkButton to="/add-city">
+        <FiPlus />
+        Adicionar uma Cidade
+      </LinkButton>
+    </DashboardHeader>
 
-        <AddButon>
-          <FiPlus />
-          Adicionar um perfil
-        </AddButon>
-      </DashboardHeader>
-      <DashboardCities />
-    </DashboardContainer>
+    <ListContainer>
+      <CardsContainer>
+        <CitiesCard />
+        <CitiesCard />
+        <CitiesCard />
+        <CitiesCard />
+        <CitiesCard />
+        <CitiesCard />
+        <CitiesCard />
+        <CitiesCard />
+        <CitiesCard />
+        <CitiesCard />
+      </CardsContainer>
+    </ListContainer>
   </Container>
 );
 

@@ -10,9 +10,9 @@ import {
   Content,
   SingInContainer,
   ActionsContainer,
-  AlertContainer,
   ElementsDiv,
 } from './styles';
+import Alert from '../../components/Alert';
 
 const SingIn: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -56,10 +56,7 @@ const SingIn: React.FC = () => {
             <Button onClick={handleLogin}>Acessar plataforma</Button>
           </SingInContainer>
 
-          <AlertContainer>
-            <FiAlertCircle size={50} color="red" />
-            <p>Acesso restrito à sócios e moderadores</p>
-          </AlertContainer>
+          <Alert>Acesso restrito à sócios e moderadores</Alert>
         </ElementsDiv>
       </Content>
     </Container>

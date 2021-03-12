@@ -22,6 +22,7 @@
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn",
         "react/jsx-props-no-spreading": "off",
+        "no-plusplus": "off",
         "react/require-default-props": "off",
         "func-names": "off",
         "react/prop-types": "off",
@@ -33,6 +34,7 @@
         "import/no-duplicates": "off",
         "no-use-before-define": "off",
         "arrow-parens": "off",
+        "@typescript-eslint/no-explicit-any": "off",
         "import/extensions": [
             "error",
             "ignorePackages",
